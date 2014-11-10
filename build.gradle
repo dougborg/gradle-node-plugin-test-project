@@ -20,12 +20,5 @@ node {
   download = true
 }
 
-group = "net.time4tea.example"
+group = "org.dougborg.gradle-node-plugin-example"
 
-npmInstall {
-  def bob = [:]
-  bob << System.getenv();
-  bob["PATH"] = bob["HOME"] + "/.gradle/nodejs/node-v0.10.33-linux-x64/bin:" + System.getenv('PATH')
-  // uncomment the next line to make me work...
-  //environment bob
-}
