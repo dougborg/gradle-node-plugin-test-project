@@ -3,3 +3,6 @@ build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
+
+# Ignore node modules.
+node_modules/

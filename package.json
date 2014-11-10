@@ -1,0 +1,8 @@
+{
+  "name": "example",
+  "description": "ex",
+  "author": "time4tea",
+  "dependencies": {
+    "safefs": "3.1.1"
+  }
+}

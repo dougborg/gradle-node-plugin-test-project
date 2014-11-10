@@ -1,0 +1,31 @@
+buildscript {
+  repositories {
+    jcenter()
+    mavenCentral()
+  }
+  dependencies {
+    classpath group: 'com.moowork.gradle', name: 'gradle-node-plugin', version:'0.7'
+  }
+}
+
+apply plugin: 'node'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.1'
+}
+
+node {
+  version = "0.10.33"
+  npmVersion = "2.1.6"
+  download = true
+}
+
+group = "net.time4tea.example"
+
+npmInstall {
+  def bob = [:]
+  bob << System.getenv();
+  bob["PATH"] = bob["HOME"] + "/.gradle/nodejs/node-v0.10.33-linux-x64/bin:" + System.getenv('PATH')
+  // uncomment the next line to make me work...
+  //environment bob
+}
